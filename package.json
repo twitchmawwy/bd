@@ -1,0 +1,73 @@
+{
+	"name": "botclient",
+	"productName": "BotClient",
+	"description": "A discord botclient built with Electron, React and discord.js.",
+	"author": "DarkGuy10",
+	"version": "0.10.3",
+	"private": true,
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/darkGuy10/BotClient.git"
+	},
+	"dependencies": {
+		"@darkguy10/discord-markdown": "^2.6.0",
+		"@skyra/discord-components-core": "^3.3.0",
+		"@skyra/discord-components-react": "^3.3.0",
+		"@testing-library/jest-dom": "^5.16.2",
+		"@testing-library/react": "^12.1.4",
+		"@testing-library/user-event": "^13.5.0",
+		"discord.js": "^13.6.0",
+		"electron-is-dev": "^2.0.0",
+		"electron-log": "^4.4.6",
+		"electron-store": "^8.0.1",
+		"electron-updater": "^5.0.1",
+		"html-to-react": "^1.4.8",
+		"markdown-to-jsx": "^7.1.7",
+		"react": "^18.0.0",
+		"react-dom": "^18.0.0",
+		"react-scripts": "^5.0.0",
+		"react-twemoji": "^0.5.0",
+		"web-vitals": "^2.1.4"
+	},
+	"main": "public/electron.js",
+	"homepage": "./",
+	"scripts": {
+		"react-start": "react-scripts start",
+		"react-build": "react-scripts build",
+		"react-test": "react-scripts test --env=jsdom",
+		"react-eject": "react-scripts eject",
+		"electron-build": "electron-builder",
+		"build": "yarn react-build && yarn electron-build",
+		"start": "concurrently -k \"yarn react-start\" \"wait-on tcp:127.0.0.1:3000 && electron .\"",
+		"lint": "prettier -w .",
+		"postinstall": "electron-builder install-app-deps"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"babel-plugin-module-resolver": "^4.1.0",
+		"concurrently": "^7.1.0",
+		"electron": "^18.0.3",
+		"electron-builder": "^23.0.3",
+		"prettier": "^2.6.2",
+		"wait-on": "^6.0.1"
+	},
+	"packageManager": "yarn@3.2.0"
+}

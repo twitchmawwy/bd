@@ -1,0 +1,49 @@
+.guildNav {
+	position: relative;
+	width: 72px;
+	flex-shrink: 0;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	background-color: var(--background-tertiary);
+}
+
+.tree {
+	display: flex;
+	height: 100%;
+}
+
+.scroller {
+	overflow: hidden scroll;
+	padding-right: 0px;
+	user-select: none;
+	padding: 12px 0 0;
+	background-color: var(--background-tertiary);
+	contain: layout size;
+	position: relative;
+	box-sizing: border-box;
+	min-height: 0;
+	-webkit-box-flex: 1;
+	flex: 1 1 auto;
+}
+
+.scroller::-webkit-scrollbar {
+	width: 0;
+}
+
+.guildSeparatorWrapper {
+	position: relative;
+	margin: 0 0 8px;
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	width: 72px;
+}
+
+.guildSeperator {
+	height: 2px;
+	width: 32px;
+	border-radius: 1px;
+	background-color: var(--background-modifier-accent);
+}
